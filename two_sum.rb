@@ -1,5 +1,5 @@
 require 'set'
-
+#complexity: n^2 bc doing n things n times nested loops
 def brute_two_sum?(arr, target_sum)
   arr.each_with_index do |el1, i|
     break if i == arr.length - 1
@@ -10,6 +10,7 @@ def brute_two_sum?(arr, target_sum)
   false
 end
 
+#nlogn + nlogn
 def sorted_two_sum?(arr, target_sum)
   arr.sort![0...-1].each_with_index do |el1, i|
     target_val = target_sum - el1
